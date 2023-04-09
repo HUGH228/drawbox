@@ -1,6 +1,7 @@
 const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext("2d");
 const saveBtn = document.getElementById("jsSave");
+const colors = document.getElementsByClassName("jsColor");
 
 canvas.width = 700;
 canvas.height = 700;
@@ -35,10 +36,13 @@ function onMouseMove(event) {
     }
 }
 
-function onMouseDown(event) {
-    painting = true;
+function handleColorClick(event) {
+    const color = event.target.style.backgroundColor;
+    ctx.strokeStyle = color;
 }
 
+Array.from(colors).forEach(color => 
+    color.addEventListener("click", handleColorClick));
 
 if (canvas) {
     canvas.addEventListener("mousemove", onMouseMove);
@@ -54,3 +58,4 @@ if (saveBtn){
 const link = document.createElement("a");
 link.download = "PaintJS[EXPORT]";
 link.click();
+
