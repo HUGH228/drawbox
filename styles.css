@@ -30,7 +30,7 @@ body {
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.068);
 }
 
-.controls__btns button
+.controls_btns button
 { 
     all: unset; /* 버튼 스타일 초기화 (웹브라우저마다 설정된걸 해제) */
     cursor: pointer; /* 커서 모양 바꾸기(1편에 마지막부분에 상세설명있음) */
@@ -45,4 +45,8 @@ body {
     text-transform: uppercase; /* 대문자 */
     font-weight: 600; /* 폰트 굵기 */
     font-size: 12px; /* 폰트사이즈 */
+}
+
+.controls_btns button:active {
+    transform: scale(0.98);
 }
