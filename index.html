@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>sign</title>
-    <style> #canvas { border: 3px solid black;} </style>
+    <!-- <style> #canvas { border: 3px solid black;} </style> -->
 </head>
 <body>
     <h1>signature</h1>
@@ -10,6 +10,7 @@
     <br>
     <button onclick="clearCanvas()">Erase</button>
     <button onclick="saveSignature()">Save</button>
+
 <script>
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
@@ -20,7 +21,7 @@
         drawing = true;
         context.beginPath();
         context.moveTo(event.touches[0].clientX - canvas.offsetLeft, event.touches[0].clientY - canvas.offsetTop);
-    });
+    })
 
     // 터치 중일 때
     canvas.addEventListener('touchmove', function(event) {
