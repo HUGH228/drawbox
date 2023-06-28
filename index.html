@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>signature</h1>
-    <canvas id="canvas" width="200" height="200" style=" position: relative; border: 1px solid #000;"></canvas>
+    <canvas id="canvas" width="250" height="150" style="border: 1px solid #000;"></canvas>
     <br>
     <button onclick="clearCanvas()">Erase</button>
     <button onclick="saveSignature()">Save</button>
@@ -26,7 +26,7 @@
     // 터치 중일 때
     canvas.addEventListener('touchmove', function(event) {
         if (drawing) {
-            context.lineTo(event.touches[0].clientX - canvas.offsetLeft, event.touches[0].clientY - canvas.offsetTop);
+            context.lineTo(event.touches[0].clientX - canvas.offsetLeft, event.touches[0].client canvas.offsetTop);
             context.stroke();
         }
     });
